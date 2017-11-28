@@ -1,24 +1,29 @@
 {
   "name": "ember-cli-tree-shaker",
   "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "description": "Experiment with tree-shaking in Ember CLI",
   "keywords": [
     "ember-addon"
   ],
   "license": "MIT",
-  "author": "",
+  "author": "Kelly Selden and Alex Navasardyan",
   "directories": {
     "doc": "doc",
     "test": "tests"
   },
-  "repository": "",
+  "repository": "https://github.com/kellyselden/ember-cli-tree-shaker.git",
   "scripts": {
     "build": "ember build",
     "start": "ember server",
     "test": "ember try:each"
   },
   "dependencies": {
-    "ember-cli-babel": "^6.6.0"
+    "broccoli-concat": "^3.2.2",
+    "broccoli-debug": "^0.6.4",
+    "broccoli-funnel": "^2.0.1",
+    "broccoli-merge-trees": "^2.0.0",
+    "ember-cli-babel": "^6.6.0",
+    "ember-cli-dependency-graph": "^0.1.1"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
