@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-tree-shaker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Experiment with tree-shaking in Ember CLI",
   "keywords": [
     "ember-addon"
