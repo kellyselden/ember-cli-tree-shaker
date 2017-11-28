@@ -10,12 +10,15 @@ So far, we have very basic tree-shaking. We use all of your app code as the entr
 
 This doesn't work with Ember Engines yet. They have custom build code this project is not aware of.
 
+This will probably break your tests, as the test code tree is not treated as an entry point.
+
 ### Highlights:
 
 * Eliminates dead addon code
 * Includes all app code
 * Ignores other trees (vendor, bower_components, etc)
 * Allow additional entry points
+* Tests will probably break
 * Works with [ember-data](https://github.com/emberjs/data)
 * Works with [ember-browserify](https://github.com/ef4/ember-browserify) (but doesn't tree-shake it yet)
 * Doesn't work with [ember-engines](https://github.com/ember-engines/ember-engines) (yet)
