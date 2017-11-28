@@ -8,6 +8,8 @@ This is a testbed for the new tree-shaking and code splitting work from [Kelly S
 
 So far, we have very basic tree-shaking. We use all of your app code as the entry point, and we only tree-shake the addon tree. This means that no app code is eliminated because it is all treated as "in use", and some addon may be inadvertently removed if it is not directly depended on from app code (vendor shims, container lookup, etc.). It is for this reason, we have an excape hatch defined below to manually `include` additional entry points.
 
+Building the dependendy graph takes time and isn't necessarily efficient. This will slow down your builds.
+
 This doesn't work with Ember Engines yet. They have custom build code this project is not aware of.
 
 This will probably break your tests, as the test code tree is not treated as an entry point.
@@ -18,6 +20,7 @@ This will probably break your tests, as the test code tree is not treated as an 
 * Includes all app code
 * Ignores other trees (vendor, bower_components, etc)
 * Allow additional entry points
+* Slows down build
 * Tests will probably break
 * Works with [ember-data](https://github.com/emberjs/data)
 * Works with [ember-browserify](https://github.com/ef4/ember-browserify) (but doesn't tree-shake it yet)
