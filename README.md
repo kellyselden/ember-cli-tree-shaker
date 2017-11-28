@@ -6,9 +6,9 @@
 
 This is a testbed for the new tree-shaking and code splitting work from [Kelly Selden](https://github.com/kellyselden) and [Alex Navasardyan](https://github.com/twokul). We will test things in here, and also port things from Ember CLI master so you can try them out early.
 
-So far, we have very basic tree-shaking. We use all of your app code as the entry point, and we only tree-shake the addon tree. This means that no app code is eliminated because it is all treated as "in use", and some addon may be inadvertently removed if it is not directly depended on from app code (vendor shims, container lookup, etc.). It is for this reason, we have an excape hatch defined below to manually `include` additional entry points.
+So far, we have very basic tree-shaking. We use all of your app code as the entry point, and we only tree-shake the addon tree. This means that no app code is eliminated because it is all treated as "in use", and some addon may be inadvertently removed if it is not directly depended on from app code (vendor shims, container lookup, etc.). It is for this reason, we have an escape hatch defined below to manually `include` additional entry points.
 
-Building the dependendy graph takes time and isn't necessarily efficient. This will slow down your builds.
+Building the dependency graph takes time and isn't necessarily efficient. This will slow down your builds.
 
 This doesn't work with Ember Engines yet. They have custom build code this project is not aware of.
 
