@@ -1,5 +1,9 @@
 # ember-cli-tree-shaker
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/kellyselden/ember-cli-tree-shaker.svg)](https://greenkeeper.io/)
+[![npm version](https://badge.fury.io/js/ember-cli-tree-shaker.svg)](https://badge.fury.io/js/ember-cli-tree-shaker)
+[![Build Status](https://travis-ci.org/kellyselden/ember-cli-tree-shaker.svg?branch=master)](https://travis-ci.org/kellyselden/ember-cli-tree-shaker)
+
 This README outlines the details of collaborating on this Ember addon.
 
 ## Installation
