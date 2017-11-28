@@ -23,7 +23,8 @@
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^2.0.0",
     "ember-cli-babel": "^6.6.0",
-    "ember-cli-dependency-graph": "^0.1.1"
+    "ember-cli-dependency-graph": "^0.1.1",
+    "ember-test-selectors": "^0.3.8"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^2.4.5",
