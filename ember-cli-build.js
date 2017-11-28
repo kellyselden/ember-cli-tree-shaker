@@ -7,7 +7,10 @@ module.exports = function(defaults) {
   let app = new EmberAddon(defaults, {
     // Add options here
     treeShaking: {
-      enabled: true
+      enabled: true,
+      include: [
+        'ember-metrics/metrics-adapters/google-analytics.js'
+      ]
     }
   });
 
