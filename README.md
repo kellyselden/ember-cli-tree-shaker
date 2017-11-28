@@ -53,7 +53,7 @@ ember install ember-cli-tree-shaker
 ```js
 // ember-cli-build.js
 
-let app = new EmberAddon(defaults, {
+let app = new EmberApp(defaults, {
   treeShaking: {
     enabled: true,
 
