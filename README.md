@@ -4,7 +4,7 @@
 [![npm version](https://badge.fury.io/js/ember-cli-tree-shaker.svg)](https://badge.fury.io/js/ember-cli-tree-shaker)
 [![Build Status](https://travis-ci.org/kellyselden/ember-cli-tree-shaker.svg?branch=master)](https://travis-ci.org/kellyselden/ember-cli-tree-shaker)
 
-This is a testbed for the new tree-shaking and code splitting work from [Kelly Selden](https://github.com/kellyselden) and [Alex Navasardyan](https://github.com/twokul). We will test things in here, and also port things from Ember CLI master so you can try them out early.
+This is a testbed for the new tree-shaking and code splitting work from [Kelly Selden](https://github.com/kellyselden) and [Alex Navasardyan](https://github.com/twokul). We will test things in here, and also port things from Ember CLI master so you can try them out early. This API is a work in progress, expect breaking changes (using [SemVer](https://semver.org/)). Feel free to suggest a better API. This project will eventually be deprecated when all the work makes it into a stable Ember CLI release.
 
 So far, we have very basic tree-shaking. We use all of your app code as the entry point, and we only tree-shake the addon tree. This means that no app code is eliminated because it is all treated as "in use", and some addon may be inadvertently removed if it is not directly depended on from app code (vendor shims, container lookup, etc.). It is for this reason, we have an escape hatch defined below to manually `include` additional entry points.
 
