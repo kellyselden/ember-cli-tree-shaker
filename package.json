@@ -41,6 +41,8 @@
     "ember-disable-prototype-extensions": "^1.1.2",
     "ember-export-application-global": "^2.0.0",
     "ember-load-initializers": "^1.0.0",
+    "ember-metrics": "^0.12.1",
+    "ember-metrics-mixins": "^0.4.2",
     "ember-resolver": "^4.0.0",
     "ember-source": "~2.16.0",
     "loader.js": "^4.2.3"
