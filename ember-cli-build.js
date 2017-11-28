@@ -9,7 +9,8 @@ module.exports = function(defaults) {
     treeShaking: {
       enabled: true,
       include: [
-        'ember-metrics/metrics-adapters/google-analytics.js'
+        'ember-metrics/metrics-adapters/google-analytics.js',
+        'ember-test-selectors/utils/bind-data-test-attributes.js'
       ]
     }
   });
