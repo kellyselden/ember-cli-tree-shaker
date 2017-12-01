@@ -107,6 +107,7 @@ function createVendorJsStrategy(options) {
     footerFiles: vendorObject.footerFiles,
     outputFile: options.outputFile,
     annotation: options.annotation,
+    separator: '\n;',
     sourceMapConfig: options.sourceMapConfig,
     treeShaking: options.treeShaking,
   });
