@@ -72,3 +72,39 @@ let app = new EmberApp(defaults, {
   }
 });
 ```
+
+## Measuring Results
+
+After enabling `treeShaking`, an `ember build` will generate additional information in the console, including the number of modules traversed and the number of dead modules found:
+
+```bash
+ember build
+...
+dead 115
+traversed 2935
+```
+
+Also, you can compare the size of `vendor.js` before and after enabling `treeShaking`:
+
+```bash
+# Before enabling
+
+ember build --environment production
+
+Built project successfully. Stored in "dist/".
+File sizes:
+  ...
+ - dist/assets/vendor.js:  3.35 MB (941.55 KB gzipped)
+```
+
+```bash
+# After enabling
+
+ember build --environment production
+
+Built project successfully. Stored in "dist/".
+File sizes:
+  ...
+ - dist/assets/vendor.js: 3.29 MB (930.26 KB gzipped)
+```
+
