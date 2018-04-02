@@ -1,4 +1,3 @@
-/* eslint-env node */
 'use strict';
 
 const concat = require('broccoli-concat');
@@ -6,6 +5,7 @@ const mergeTrees = require('broccoli-merge-trees');
 const BroccoliDebug = require('broccoli-debug');
 const Funnel = require('broccoli-funnel');
 const Graph = require('ember-cli-dependency-graph');
+ // eslint-disable-next-line node/no-unpublished-require
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 const DEFAULT_CONFIG = {
@@ -76,9 +76,11 @@ class ConcatenationStrategy {
 
           let dead = graph.calculateDead();
 
+          /* eslint-disable no-console */
           dead.forEach(x => console.log(x));
           console.log('dead', dead.length);
           console.log('traversed', graph.flattened.length);
+          /* eslint-enable no-console */
 
           return dead;
         },

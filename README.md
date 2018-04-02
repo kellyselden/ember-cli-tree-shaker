@@ -25,7 +25,7 @@ This will probably break your tests, as the test code tree is not treated as an 
 * Works with [ember-data](https://github.com/emberjs/data)
 * Works with [ember-browserify](https://github.com/ef4/ember-browserify) (but doesn't tree-shake it yet)
 * Doesn't work with [ember-engines](https://github.com/ember-engines/ember-engines) (yet)
-* Tested on Ember CLI 2.17
+* Tested on Ember CLI 2.18
 
 ### Statistics Sample
 
