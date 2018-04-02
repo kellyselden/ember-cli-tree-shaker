@@ -184,7 +184,7 @@ EmberApp.prototype.javascript = function() {
   let deprecate = this.project.ui.writeDeprecateLine.bind(this.project.ui);
   let applicationJs = this.appAndDependencies();
 
-  if (this.legacyFilesToAppend.length > 0) {
+  if (this.legacyFilesToAppend && this.legacyFilesToAppend.length > 0) {
     deprecate(`Usage of EmberApp.legacyFilesToAppend is deprecated. ` +
       `Please use EmberApp.import instead for the following files: '${this.legacyFilesToAppend.join('\', \'')}'`);
 
