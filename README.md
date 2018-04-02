@@ -1,4 +1,5 @@
-# ember-cli-tree-shaker
+ember-cli-tree-shaker
+==============================================================================
 
 [![Greenkeeper badge](https://badges.greenkeeper.io/kellyselden/ember-cli-tree-shaker.svg)](https://greenkeeper.io/)
 [![npm version](https://badge.fury.io/js/ember-cli-tree-shaker.svg)](https://badge.fury.io/js/ember-cli-tree-shaker)
@@ -42,13 +43,16 @@ This will probably break your tests, as the test code tree is not treated as an 
 * [code-corps-ember](https://github.com/code-corps/code-corps-ember)
   * modules removed: 140
 
-## Installation
+Installation
+------------------------------------------------------------------------------
 
 ```
 ember install ember-cli-tree-shaker
 ```
 
-## Usage
+
+Usage
+------------------------------------------------------------------------------
 
 ```js
 // ember-cli-build.js
@@ -108,3 +112,35 @@ File sizes:
  - dist/assets/vendor.js: 3.29 MB (930.26 KB gzipped)
 ```
 
+
+Contributing
+------------------------------------------------------------------------------
+
+### Installation
+
+* `git clone <repository-url>`
+* `cd my-addon`
+* `npm install`
+
+### Linting
+
+* `npm run lint:js`
+* `npm run lint:js -- --fix`
+
+### Running tests
+
+* `ember test` – Runs the test suite on the current Ember version
+* `ember test --server` – Runs the test suite in "watch mode"
+* `npm test` – Runs `ember try:each` to test your addon against multiple Ember versions
+
+### Running the dummy application
+
+* `ember serve`
+* Visit the dummy application at [http://localhost:4200](http://localhost:4200).
+
+For more information on using ember-cli, visit [https://ember-cli.com/](https://ember-cli.com/).
+
+License
+------------------------------------------------------------------------------
+
+This project is licensed under the [MIT License](LICENSE.md).

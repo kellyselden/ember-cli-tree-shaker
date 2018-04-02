@@ -8,37 +8,6 @@ const Graph = require('ember-cli-dependency-graph');
  // eslint-disable-next-line node/no-unpublished-require
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
-const DEFAULT_CONFIG = {
-  storeConfigInMeta: true,
-  autoRun: true,
-  outputPaths: {
-    app: {
-      html: 'index.html',
-    },
-    tests: {
-      js: '/assets/tests.js',
-    },
-    vendor: {
-      css: '/assets/vendor.css',
-      js: '/assets/vendor.js',
-    },
-    testSupport: {
-      css: '/assets/test-support.css',
-      js: {
-        testSupport: '/assets/test-support.js',
-        testLoader: '/assets/test-loader.js',
-      },
-    },
-  },
-  minifyCSS: {
-    options: { relativeTo: 'assets' },
-  },
-  sourcemaps: {},
-  trees: {},
-  jshintrc: {},
-  addons: {},
-};
-
 class Exclude extends Funnel {
   constructor(inputNode, options) {
     super(inputNode, {
@@ -183,17 +152,7 @@ class Assembler {
 }
 
 EmberApp.prototype.javascript = function() {
-  let deprecate = this.project.ui.writeDeprecateLine.bind(this.project.ui);
   let applicationJs = this.appAndDependencies();
-
-  if (this.legacyFilesToAppend.length > 0) {
-    deprecate(`Usage of EmberApp.legacyFilesToAppend is deprecated. ` +
-      `Please use EmberApp.import instead for the following files: '${this.legacyFilesToAppend.join('\', \'')}'`);
-
-    this.legacyFilesToAppend.forEach(legacyFile => {
-      this.import(legacyFile);
-    });
-  }
 
   let appFilePath = this.options.outputPaths.app.js;
   let vendorFilePath = this.options.outputPaths.vendor.js;
@@ -215,7 +174,7 @@ EmberApp.prototype.javascript = function() {
     strategies.push(createVendorJsStrategy({
       name: this.name,
       files: this._scriptOutputFiles[importPath],
-      isMainVendorFile: importPath === DEFAULT_CONFIG.outputPaths.vendor.js,
+      isMainVendorFile: importPath === vendorFilePath,
       outputFile: importPath,
       sourceMapConfig: this.options.sourcemaps,
       treeShaking: this.options.treeShaking,
