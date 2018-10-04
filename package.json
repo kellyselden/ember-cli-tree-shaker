@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "broccoli-concat": "^3.2.2",
-    "broccoli-debug": "^0.6.4",
+    "broccoli-debug": "0.6.4",
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^2.0.0",
     "ember-cli-dependency-graph": "^0.1.2"
