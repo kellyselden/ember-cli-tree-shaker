@@ -24,7 +24,7 @@
     "broccoli-debug": "^0.6.4",
     "broccoli-funnel": "^2.0.1",
     "broccoli-merge-trees": "^2.0.0",
-    "ember-cli-dependency-graph": "^0.1.2"
+    "ember-cli-dependency-graph": "^0.2.0"
   },
   "devDependencies": {
     "broccoli-asset-rev": "^3.0.0",
